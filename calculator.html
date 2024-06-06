@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
@@ -11,8 +12,12 @@
     Second No :
     <input type="text" id="num2">
     <button id="divisionBtn" style="cursor:pointer;"> /</button>
+    <button id="sumBtn" class="btn-warning">Sum</button>
     <div>Result is <span id="result"></span></div>
+
+
     <button>Edit</button>
+
     <script>
         document.getElementById('divisionBtn').onclick = function() {
             // Get the values from the input fields
@@ -28,6 +33,15 @@
                 // Display the result
                 document.getElementById('result').textContent = result;
             }
+        }
+        document.getElementById('sumBtn').onclick = function() {
+            // Get the values from the input fields
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            // Perform the addition
+            var result = num1 + num2;
+            // Display the result
+            document.getElementById('result').textContent = result; 
         }
     </script>
 </body>
